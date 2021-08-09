@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+  <title>LIB Input Masks</title>
+
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+      border: 0;
+      outline: 0;
+    }
+    .wiew__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .wiew__container__inputs {
+      background-color: rgb(225, 225, 225);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 400px;
+      height: 640px;
+      padding: 15px;
+    }
+    .wiew__container__inputs h1 {
+      background-color: rgb(241, 241, 241);
+      color: rgb(80, 80, 80);
+      padding: 15px 0;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 20px;
+      font-weight: 300;
+    }
+    .wiew__container__inputs .inputs {
+      display: flex;
+      flex-direction: column;
+    }
+    .wiew__container__inputs input {
+      padding: 10px 14px;
+      font-size: 16px;
+      font-weight: 300;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+    .input__test {
+      background-color: rgb(241, 241, 241);
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 18px 0;
+    }
+    .input__test p {
+      color: rgb(80, 80, 80);
+      font-size: 16px;
+      font-weight: 300;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .input__test select {
+      color: rgb(80, 80, 80);
+      background-color: rgb(220, 220, 220);
+      height: 40px;
+      font-size: 18px;
+      font-weight: 300;
+      padding: 0 14px;
+    }
+    .input__test select option {
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+    .input__test input {
+      color: rgb(80, 80, 80);
+      background-color: rgb(220, 220, 220);
+      height: 40px;
+      font-size: 18px;
+      font-weight: 300;
+      padding: 0 14px;
+      border: 0;
+      margin-left: 5px;
+    }
+    .input__test input:hover, .input__test select:hover {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  
+  <section class="wiew__container">
+    <div class="wiew__container__inputs">
+      <h1>Teste os inputs</h1>
+      <div class="inputs">
+        <input class="cpf_mask" onkeypress="$(this).mask('00000-000')" type="text" placeholder="CPF - 000.000.000-00">
+        <input class="" type="text" placeholder="CEP - 00000-000">
+        <input class="" type="text" placeholder="Tempo - 00:00:00">
+        <input class="" type="text" placeholder="Data e tempo - 00/00/0000 00:00:00">
+        <input class="" type="text" placeholder="Telefone - 0000-0000">
+        <input class="" type="text" placeholder="Telefone e DDD - (00) 0000-0000">
+        <input class="" type="text" placeholder="Celular - 00000-0000">
+        <input class="" type="text" placeholder="Celular e DDD - (00) 00000-0000">
+        <input class="" type="text" placeholder="Limitador de caracteres">
+      </div>
+      <div class="input__test">
+        <p>Teste a validação dos inputs</p>
+        <select name="select">
+          <option value="cpf">CPF</option>
+          <option value="cep" selected>CEP</option>
+          <option value="time">Tempo</option>
+          <option value="datetime">Data e tempo</option>
+          <option value="phone">Telefone</option>
+          <option value="phoneddd">Telefone e DDD</option>
+          <option value="cel">Celular</option>
+          <option value="celddd">Celular e DDD</option>
+          <option value="limiter">Limitador de caracteres</option>
+        </select>
+        <input type="button" value="TESTAR">
+      </div>
+    </div>
+  </section>
+
+  <script src="/script.js"></script>
+</body>
+</html>
